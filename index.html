@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikhil Chafekar - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f4f4f9, #d6e1e9);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Section */
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: transparent;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #00B5B8;
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.1) rotateY(15deg);
+    }
+
+    header h1 {
+      font-size: 50px;
+      margin: 10px 0;
+      color: #00B5B8;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 20px;
+      font-family: 'Lora', serif;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1A1A2E;
+      padding: 15px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      z-index: 1000;
+    }
+
+    nav button {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    nav button:hover {
+      background: #FF6B6B;
+      color: #1A1A2E;
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    /* Section Styles */
+    section {
+      margin: 40px 0;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #00B5B8;
+      text-transform: uppercase;
+      border-bottom: 2px solid #00B5B8;
+      padding-bottom: 10px;
+    }
+
+    section p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+      font-family: 'Lora', serif;
+    }
+
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #contact input, #contact textarea {
+      width: 80%;
+      max-width: 500px;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    #contact button {
+      padding: 10px 20px;
+      background-color: #00B5B8;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #contact button:hover {
+      background-color: #007b7f;
+    }
+
+    #responseMessage {
+      margin-top: 20px;
+      font-size: 16px;
+      color: green;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: #1A1A2E;
+      color: white;
+    }
+
+    footer a {
+      color: #00B5B8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./assets/profile.jpg" alt="Nikhil Chafekar's Photo">
+    <h1>Nikhil Chafekar</h1>
+    <p>Software Developer Trainee at Numetry Technologies</p>
+  </header>
+
+  <nav>
+    <button onclick="scrollToSection('about')">About</button>
+    <button onclick="scrollToSection('work')">Work</button>
+    <button onclick="scrollToSection('projects')">Projects</button>
+    <button onclick="scrollToSection('resume')">Resume</button>
+    <button onclick="scrollToSection('contact')">Contact</button>
+  </nav>
+
+  <div class="container">
+    <section id="about" class="active">
+      <h2>About Me</h2>
+      <p>
+        I’m Nikhil Chafekar, currently working as a Software Developer Trainee at Numetry Technologies.
+      </p>
+    </section>
+
+    <section id="work">
+      <h2>Work</h2>
+      <p>
+        Employee Management System and portfolio projects.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>
+        Portfolio website and management applications.
+      </p>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>
+        <a href="#">View Resume</a>
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="responseMessage"></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Nikhil Chafekar</p>
+  </footer>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
